@@ -1,0 +1,25 @@
+#body{
+	display: block;
+	margin: 0;
+	background-color: #F5FFFA;
+	padding-left: 15%;
+	padding-right: 15%;
+}
+
+#wrapper{
+	background-color: #FFF;
+	margin-top: 45px;
+}
+
+
+#header{
+	margin: 0 auto;
+	padding: 3px;
+	padding-bottom: 45px;
+	text-align: center;
+}
+
+.dock-fixed{
+	background-color: #151515;
+	height: 25px;
+}
