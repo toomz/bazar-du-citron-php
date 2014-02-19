@@ -1,13 +1,15 @@
 #body{
 	display: block;
 	margin: 0;
-	background-color: #F5FFFA;
+	/*background-color: #F5FFFA;*/
+	background-color: white;
 }
 
 #wrapper{
 	padding-top: 70px;
-	padding-left: 15%;
-	padding-right: 15%;
+	padding-left: 10%;
+	padding-right: 10%;
+	background-color: white;
 }
 
 
@@ -22,43 +24,31 @@
 	background-color: black;
 }
 
-select.select-mini, .select-mini{
-    height: auto;
-    line-height: 14px;
-    max-width: 60px;
-}
-
-.decal-align{
-	margin-left: 10px;	
-}
-
-.form-inline .form-group{
-    margin-left: 0;
-    margin-right: 0;
-}
-
-/* Formulaire enregistrement */
+/* Formulaire enregistrement d'un nouveau jeu */
 
 .form{
+	width: auto;
+	height: auto;
+}
+.form_add_game{
 	border: 1px black;
 }
 
-.form fieldset{
+.form_add_game fieldset{
 	border: none;
 	width: 100%;
 	float: left;
 	margin: 0px;
 	padding: 5px;
 	font-size: 15px;
-	font-weight: bold;
 }
 
-.form > fieldset{
+.form_add_game > fieldset{
 	border: 10px black;
 	border-radius: 5px;
 }
-.form  fieldset > legend{
-	margin-left: 30px;
+.form_add_game fieldset > legend{
+	/*margin-left: 30px;*/
 	color: red;
 	font-weight: normal;
 	font-size: 20px;
@@ -66,22 +56,126 @@ select.select-mini, .select-mini{
 	border-bottom: 0.5px grey;
 }
 
-.form > legend{
-	width: 100%;
-	font-size: 30px;
-	padding: 25px 0px;
-}
-.form label{
-	width: 100px;
-	float: left;
+.form_add_game label{
+	width: 150px;
+	display: inline-block;
+	vertical-align: top;
 	text-align: right;
 	margin-right: 10px;
 }
 
-.form input, .form textarea{
+.form_add_game input, .form_add_game textarea{
 	border-radius: 5px;
 	border: 2px inset;
 }
-.form input{
+.form_add_game input{
 	height: 20px;
+}
+
+.form_add_game select{
+	border-radius: 3px;
+	background-color: #F5FFFA;
+	min-width: 50px;
+}
+
+/* Onglets Admin */
+ 
+#content { 
+	margin: 0 auto; 
+	width: 100%; 
+}
+
+#content ul.onglets { 
+	margin: 0; 
+	padding: 0; 
+	float: left; 
+	list-style: none; 
+	height: 30px; 
+	/*border-left: 1px solid #666; */
+	width: 100%; 
+}
+
+#content ul.onglets li { 
+	float: left; 
+	margin: 0; 
+	padding: 0; 
+	height: auto; 
+	line-height: 30px; 
+	/*border: 1px solid #666; */
+	border-left: none; 
+	margin-bottom: -1px; 
+	overflow: hidden; 
+	position: relative; 
+	/*background: #ddd; */
+	border-radius: 8px 8px 0px 0px;
+}
+
+#content ul.onglets li a { 
+	text-decoration: none; 
+	color: #000; 
+	display: block; 
+	font-size: 16px; 
+	padding: 0 20px; 
+}
+
+#content ul.onglets li a:hover { 
+	background: #bbb; 
+	color: red 
+}
+
+.ui-tabs .ui-tabs-nav li.ui-state-active { 
+	cursor: text; 
+	color: #666; 
+	background: #E6E6FA;
+}
+
+.ui-tabs .ui-tabs-nav li.ui-tabs-selected a { 
+	position: relative; 
+	background: #fff ;
+}
+
+.ui-tabs .ui-tabs-nav li a,.ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {cursor: pointer }
+
+.ui-tabs .ui-tabs-panel { 
+	display: block; 
+	border: none; 
+	overflow: hidden; 
+	clear: both; 
+	float: left; 
+	width: 100%; 
+	background: #E6E6FA; 
+	margin: 0; 
+	padding: 10px 10px 0; 
+	font-size: 14px 
+}
+.ui-tabs .ui-tabs-hide { display: none !important }
+
+/* Admin gestion des jeux */
+
+.admin-col-gauche{
+	float: left;
+	width: 15%;
+	margin: 0;
+	border: 1px black;
+
+}
+
+.admin-col-droite{
+	float: right;
+	margin: 0;
+	width: 85%;
+}
+
+ul.admin-menu{
+	list-style: none;
+	padding-left: 5px;	
+}
+
+ul.admin-menu li{
+	padding: 10px 0px;
+}
+
+ul.admin-menu li a{
+	text-decoration: none;
+	color: black;
 }
