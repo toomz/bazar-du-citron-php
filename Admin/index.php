@@ -11,12 +11,12 @@
 
 		   	<ul class="onglets">
 				<li><a href="#tabs-1" title="">Gestion des jeux</a></li>
-				<li><a href="#tabs-2" title="">Gestion des utilisateurs</a></li>
-				<li><a href="#tabs-3" title="">Gestion des films</a></li>
-				<li><a href="#tabs-4" title="">Gestion des séries</a></li>
+				<li><a href="#tabs-2" title="">Gestion des films</a></li>
+				<li><a href="#tabs-3" title="">Gestion des séries</a></li>
+				<li><a href="#tabs-4" title="">Gestion des utilisateurs</a></li>
 			</ul>
 
-	      	<div id="tabs-1">
+	      	<div id="tabs-1" style="border-top: 1px blue;">
 	        	<?php include "Games/index.php"  ?>
 			</div>
 			<div id="tabs-2">

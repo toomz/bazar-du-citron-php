@@ -1,8 +1,8 @@
 #body{
 	display: block;
 	margin: 0;
-	/*background-color: #F5FFFA;*/
-	background-color: white;
+	background-color: #F5FFFA;
+	/*background-color: white;*/
 }
 
 #wrapper{
@@ -83,6 +83,7 @@
 #content { 
 	margin: 0 auto; 
 	width: 100%; 
+	font-family:Arial, Helvetica, sans-serif;
 }
 
 #content ul.onglets { 
@@ -93,45 +94,51 @@
 	height: 30px; 
 	/*border-left: 1px solid #666; */
 	width: 100%; 
+	font-family:Arial, Helvetica, sans-serif;
 }
 
 #content ul.onglets li { 
 	float: left; 
 	margin: 0; 
 	padding: 0; 
-	height: auto; 
+	height: 30px; 
 	line-height: 30px; 
-	/*border: 1px solid #666; */
 	border-left: none; 
 	margin-bottom: -1px; 
 	overflow: hidden; 
 	position: relative; 
-	/*background: #ddd; */
-	border-radius: 8px 8px 0px 0px;
+	border-radius: 5px 5px 0px 0px;
 }
 
 #content ul.onglets li a { 
 	text-decoration: none; 
-	color: #000; 
+	/*color: #000; */
 	display: block; 
 	font-size: 16px; 
+	font-family:Arial, Helvetica, sans-serif;
 	padding: 0 20px; 
 }
 
 #content ul.onglets li a:hover { 
 	background: #bbb; 
-	color: red 
+	color: blue; 
 }
 
 .ui-tabs .ui-tabs-nav li.ui-state-active { 
 	cursor: text; 
-	color: #666; 
-	background: #E6E6FA;
+	/*color: #666; */
+	background: blue;
+	/*background: #E6E6FA;*/
+}
+.ui-tabs .ui-tabs-nav li.ui-state-active a{
+	color: white; 	
 }
 
 .ui-tabs .ui-tabs-nav li.ui-tabs-selected a { 
 	position: relative; 
 	background: #fff ;
+	color: white; 
+
 }
 
 .ui-tabs .ui-tabs-nav li a,.ui-tabs.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-selected a {cursor: pointer }
@@ -143,20 +150,19 @@
 	clear: both; 
 	float: left; 
 	width: 100%; 
-	background: #E6E6FA; 
+	/*background: #E6E6FA; */
 	margin: 0; 
 	padding: 10px 10px 0; 
 	font-size: 14px 
 }
 .ui-tabs .ui-tabs-hide { display: none !important }
 
-/* Admin gestion des jeux */
+/* Admin onglet gestion des jeux */
 
 .admin-col-gauche{
 	float: left;
 	width: 15%;
 	margin: 0;
-	border: 1px black;
 
 }
 
@@ -172,10 +178,118 @@ ul.admin-menu{
 }
 
 ul.admin-menu li{
-	padding: 10px 0px;
+	padding: 10px 5px;
+	border-bottom: 1px black;
+	margin: 5px 0px;
+	/*background-color: #9400D3;*/
+	border-radius: 5px;
 }
 
 ul.admin-menu li a{
 	text-decoration: none;
 	color: black;
 }
+
+/* Admin affichage des jeux */
+
+table a:link {
+	color: #666;
+	font-weight: bold;
+	text-decoration:none;
+}
+table a:visited {
+	color: #999999;
+	font-weight:bold;
+	text-decoration:none;
+}
+table a:active,
+table a:hover {
+	color: #bd5a35;
+	text-decoration:underline;
+}
+table {
+	font-family:Arial, Helvetica, sans-serif;
+	color:#666;
+	font-size:12px;
+	text-shadow: 1px 1px 0px #fff;
+	background:#eaebec;
+	margin:20px;
+	border:#ccc 1px solid;
+
+	-moz-border-radius:3px;
+	-webkit-border-radius:3px;
+	border-radius:3px;
+
+	-moz-box-shadow: 0 1px 2px #d1d1d1;
+	-webkit-box-shadow: 0 1px 2px #d1d1d1;
+	box-shadow: 0 1px 2px #d1d1d1;
+}
+table th {
+	padding:5px 5px 5px 5px;
+	/*border-top:1px solid #fafafa;*/
+	border-bottom:1px solid #e0e0e0;
+	color: white;
+	text-shadow: none;
+	background: blue;
+	/*background: #ededed;*/
+/*	background: -webkit-gradient(linear, left top, left bottom, from(#ededed), to(#ebebeb));
+	background: -moz-linear-gradient(top,  #ededed,  #ebebeb);*/
+}
+table th:first-child {
+	text-align: left;
+	padding-left:20px;
+}
+table tr:first-child th:first-child {
+	-moz-border-radius-topleft:3px;
+	-webkit-border-top-left-radius:3px;
+	border-top-left-radius:3px;
+}
+table tr:first-child th:last-child {
+	-moz-border-radius-topright:3px;
+	-webkit-border-top-right-radius:3px;
+	border-top-right-radius:3px;
+}
+table tr {
+	text-align: center;
+	padding-left:20px;
+}
+table td:first-child {
+	text-align: left;
+	padding-left:20px;
+	border-left: 0;
+}
+table td {
+	padding:5px;
+	border-top: 1px solid #ffffff;
+	border-bottom:1px solid #e0e0e0;
+	border-left: 1px solid #e0e0e0;
+
+	background: #fafafa;
+	background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#fafafa));
+	background: -moz-linear-gradient(top,  #fbfbfb,  #fafafa);
+}
+table tr.even td {
+	background: #f6f6f6;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f8f8f8), to(#f6f6f6));
+	background: -moz-linear-gradient(top,  #f8f8f8,  #f6f6f6);
+}
+table tr:last-child td {
+	border-bottom:0;
+}
+table tr:last-child td:first-child {
+	-moz-border-radius-bottomleft:3px;
+	-webkit-border-bottom-left-radius:3px;
+	border-bottom-left-radius:3px;
+}
+table tr:last-child td:last-child {
+	-moz-border-radius-bottomright:3px;
+	-webkit-border-bottom-right-radius:3px;
+	border-bottom-right-radius:3px;
+}
+table tr:hover td {
+	background: #f2f2f2;
+	background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f0f0f0));
+	background: -moz-linear-gradient(top,  #f2f2f2,  #f0f0f0);	
+}
+
+/* Admin onglet gestion utilisateurs */
