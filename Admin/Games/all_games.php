@@ -23,6 +23,14 @@
 		<?php
 			$cpt = 0;
 			while($game = $games->fetch_assoc()){
+				$editor = $bdd->query("SELECT editor_name FROM Editors WHERE id_editor=".$game['id_game']);
+				$editor = $editor->fetch_assoc();
+				$author = $bdd->query("SELECT author_surname, author_first_name FROM Authors WHERE id_author=".$game['id_game']);
+				$author = $author->fetch_assoc();
+				
+				$language = $bdd->query("SELECT languages_label FROM Languages WHERE id_languages=(SELECT game_language_language FROM Game_assoc_language WHERE game_language_game=".$game['id_game'].")");
+				$language = $language->fetch_assoc();
+
 				$language = $bdd->query("SELECT languages_label FROM Languages WHERE id_languages=(SELECT game_language_language FROM Game_assoc_language WHERE game_language_game=".$game['id_game'].")");
 				$language = $language->fetch_assoc();
 				if($cpt%2 == 0)
@@ -31,8 +39,8 @@
 					echo "<tr class='even'>";
 				echo "<td>".$game['game_name']."</td>";
 				echo "<td></td>";
-				echo "<td></td>";
-				echo "<td></td>";
+				echo "<td>".$editor['editor_name']."</td>";
+				echo "<td>".$author['author_first_name']." ".$author['author_surname']."</td>";
 				echo "<td>".$language['languages_label']."</td>";
 				echo "<td>".$game['game_release']."</td>";
 				echo "<td>".$game['game_min_players']." j.</td>";

@@ -1,7 +1,7 @@
-<div style="clear: both; margin:2% 27%;"><img src="/Le-Bazar-du-Citron/img/banniere_save_game.png"></div>
+<div style="clear: both; margin:2% 19%;"><img src="/Le-Bazar-du-Citron/img/banniere_save_game.png"></div>
 <div class="form">
 	<form class="form_add_game" action="saveGame.php" method="post">	
-		<fieldset><legend>Informations générales</legend>
+		<!-- <fieldset><legend>Informations générales</legend> -->
 			<p>
 				<label for="gameNameInput">Nom du jeu</label>
 				<input type="text" name="gameNameInput" id="gameNameInput" size="30" />
@@ -76,14 +76,14 @@
 					} ?>
 				</select>
 			</p>
-		</fieldset>
-		<fieldset><legend>Informations complémentaires</legend>																		
+		<!-- </fieldset> -->
+		<!-- <fieldset><legend>Informations complémentaires</legend>																		 -->
 			<p>
 				<label for="inputLongDescName">Longue description</label>
-				<textarea name="inputLongDescName" id="inputLongDescName" cols="80" rows="15"></textarea>
+				<textarea name="inputLongDescName" id="inputLongDescName" cols="75" rows="15"></textarea>
 			</p>								
-		</fieldset>				
+		<!-- </fieldset>				 -->
 
-		<p class="submit"><button type="submit">Send</button></p>		
+		<p class="submit"><button type="submit">Enregistrer</button></p>		
 	</form>	
 </div>
