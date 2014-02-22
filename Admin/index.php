@@ -3,6 +3,8 @@
 
 	$editors = getEditors($bdd);
 	$authors = getAuthors($bdd);
+	$languages = $bdd->query('SELECT * FROM Languages');
+	$types = $bdd->query('SELECT * FROM Game_types');
 
 	include $_SERVER['DOCUMENT_ROOT']."/Le-Bazar-du-Citron/header.php";
 ?>
@@ -16,7 +18,7 @@
 				<li><a href="#tabs-4" title="">Gestion des utilisateurs</a></li>
 			</ul>
 
-	      	<div id="tabs-1" style="border-top: 1px blue;">
+	      	<div id="tabs-1">
 	        	<?php include "Games/index.php"  ?>
 			</div>
 			<div id="tabs-2">

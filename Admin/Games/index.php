@@ -1,6 +1,3 @@
-<?php
-
-?>
 <div id="onglets">
 <div class="admin-col-gauche">
 	<ul class="admin-menu">
@@ -14,7 +11,7 @@
 <div class="admin-col-droite">
 
 	<div id="onglets-1">
-		<?php include "all_games.php" ?>
+		<?php include "show_all_games.php" ?>
 	</div>
 	<div id="onglets-2">
 		<?php  include "form_new_game.php" ?>

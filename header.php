@@ -12,25 +12,45 @@
 		<link rel="stylesheet" type="text/css" href="/Le-Bazar-du-Citron/css/dock.css" />
 		
 	
-	<!--	<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">-->
-		<script src="//code.jquery.com/jquery-1.9.1.js"></script>	
-		<script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script>
+		<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
+		<script src="//code.jquery.com/jquery-1.11.0.js"></script>	
+		<!-- // <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script> -->
+		<!-- // <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
+		<!-- // <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script> -->
 		<script type="text/javascript">
 			$(document).ready(
 				function() { 
-					$("#tabs").tabs();
+					// $("#tabs").tabs();
 					$("#onglets").tabs();
+
+					$('.form_add_game').submit(function() {
+				 		
+				        var name = $('#gameNameInput').val();
+				        var shortDesc = $('#inputShortDescName').val();
+				        var longDesc = $('#inputLongDescName').val();
+				        var minPlayers = $('#minPlayersSelect').val();
+				        var maxPlayers = $('#maxPlayersSelect').val();
+				        var minAge = $('#minAgeSelect').val();
+				        var duration = $('#durationSelect').val();
+				        var price = $('#priceSelect').val();
+
+				        var editor = $('#editorSelect').val();
+				        var author = $('#authorSelect').val();
+				        
+				        $.post(
+				        	"Games/saveGame.php", 
+				        	{name: name, shortDesc: shortDesc, longDesc: longDesc, minPlayers: minPlayers,
+				        		maxPlayers: maxPlayers, minAge: minAge, duration: duration, price: price,
+				        		editor: editor, author: author}, 
+				        	function(data){
+					        	alert(data);
+					        });
+				        return false;
+				    });
 				}
 			);
 		</script>
 	
-	<!--
-		<link href="/Le-Bazar-du-Citron/tabulous/src/tabulous.css" rel="stylesheet" type="text/css">
-		<script type="text/javascript" src="/Le-Bazar-du-Citron/tabulous/src/jquery.min.js"></script>
-		<script type="text/javascript" src="/Le-Bazar-du-Citron/tabulous/src/tabulous.js"></script>
-		
-		<link rel="stylesheet" type="text/css" href="/Le-Bazar-du-Citron/formulaires/css/screen.css" />
-		<link href="/Le-Bazar-du-Citron/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet"> -->
 		<!--[if lt IE 9]>
 	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
 	      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
