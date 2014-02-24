@@ -1,6 +1,6 @@
 <div style="clear: both; margin:2% 19%;"><img src="/Le-Bazar-du-Citron/img/banniere_save_game.png"></div>
 <div class="form">
-	<form class="form_add_game" action="#" method="post">	
+	<form class="form_add_game" id="add_game" action="#" method="post">	
 			<p>
 				<label for="gameNameInput">Nom du jeu</label>
 				<input type="text" name="gameNameInput" id="gameNameInput" size="30" />
