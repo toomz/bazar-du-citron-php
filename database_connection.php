@@ -1,5 +1,5 @@
 <?php
-$bdd = new mysqli("localhost", "", "", "bazar-du-citron");
+$bdd = new mysqli("localhost", "root", "10e15p3&", "bazar-du-citron");
 
 function getEditors($bdd){
 	return $bdd->query('SELECT * FROM Editors');
