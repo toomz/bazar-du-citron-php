@@ -79,18 +79,38 @@
 				        var price = $('#priceSelect').val();
 				        var editor = $('#editorSelect').val();
 				        var author = $('#authorSelect').val();
+				        var language = $('#languageSelect').val();
+				        var type = $('#typeSelect').val();
 				        
 				        $.post(
 				        	"saveGame.php", 
 				        	{name: name, shortDesc: shortDesc, longDesc: longDesc, minPlayers: minPlayers,
 				        		maxPlayers: maxPlayers, minAge: minAge, duration: duration, price: price,
-				        		editor: editor, author: author}, 
+				        		editor: editor, author: author, language: language, type: type}, 
 				        	function(data){
 					        	alert(data);
 					        });
 				        return false;
 				    });
-				}
+					$('#onglet-1').click(function(){
+						$('#onglets-2').css("display", "none");
+						$('#onglets-3').css("display", "none");
+						$('#onglets-1').css("display", "block");
+						return false;
+					});
+					$('#onglet-2').click(function(){
+						$('#onglets-1').css("display", "none");
+						$('#onglets-3').css("display", "none");
+						$('#onglets-2').css("display", "block");
+						return false;
+					});
+					$('#onglet-3').click(function(){
+						$('#onglets-2').css("display", "none");
+						$('#onglets-1').css("display", "none");
+						$('#onglets-3').css("display", "block");
+						return false;
+					});
+				}				
 			);
 		</script>
 	
@@ -111,9 +131,9 @@
 			<div id="onglets">
 				<div class="admin-col-gauche">
 					<ul class="admin-menu">
-						<li><a href="#onglets-1" title="">-> Tous les jeux</a></li>
-						<li><a href="#onglets-2" title="">-> Ajouter un jeu</a></li>
-						<li><a href="#onglets-3" title="">-> Autres gestions</a></li>
+						<li><a href="#" title="" id="onglet-1">-> Tous les jeux</a></li>
+						<li><a href="#onglets-2" title="" id="onglet-2">-> Ajouter un jeu</a></li>
+						<li><a href="#onglets-3" title="" id="onglet-3">-> Autres gestions</a></li>
 					</ul>
 				</div>
 
@@ -124,7 +144,7 @@
 					<div id="onglets-2" style="display: none">
 						<?php  include "form_new_game.php" ?>
 					</div>
-					<div>
+					<div id="onglets-3" style="display: none">
 						<?php  include "form_new_others.php" ?>
 					</div>
 				</div>

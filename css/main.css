@@ -254,5 +254,13 @@ table tr:hover td {
 	font-weight: bold;
 }
 
+.form-others label{
+	display: block;
+	font-weight: bold;
+}
+
+.form-others input{
+	border-radius: 3px;
+}
 
 /* Admin onglet gestion utilisateurs */
