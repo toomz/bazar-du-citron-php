@@ -62,8 +62,15 @@
         </div> -->
 
         <header id="header">
-            <div style="float: left; width: 45%;"><img src="/Le-Bazar-du-Citron/img/banniere.png"></div>
-            <div style="float: right; width: 45%; padding-left: 40px"><form><label>Recherche : </label><input/></form></div>
+            <div style="float: left; width: 45%; margin-left: 20px"><img src="/Le-Bazar-du-Citron/img/Logo.png" width="400px" height="80px"></div>
+            <div style="float: right; width: 20%;">
+                <ul style="list-style: none;">
+                    <li>About us</li>
+                    <li>Contact us</li>
+                    <li>Blablabla</li>
+                </ul>
+            </div>
+            <div><form><label>Recherche : </label><input/></form></div>
         </header>
 
 		<div id="wrapper">

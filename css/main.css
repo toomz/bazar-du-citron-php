@@ -17,7 +17,7 @@
 	min-height: 552px;
 	/*margin-bottom: 50px;*/
 	overflow: hidden;
-	border-radius: 3px;
+	border-radius: 3px 3px 0px 0px;
 
 	-moz-box-shadow: 2px 2px 10px #8B8B8C;
 	-webkit-box-shadow: 2px 2px 10px #8B8B8C;
@@ -47,6 +47,14 @@
 	text-align: center; 
 	font-weight: bold;
 	bottom: 0;
+	background-color: white;
+	margin-left: 10%;
+	margin-right: 10%;
+	margin-bottom: 10px;
+	border-radius: 0px 0px 3px 3px;
+	-moz-box-shadow: 2px 2px 10px #8B8B8C;
+	-webkit-box-shadow: 2px 2px 10px #8B8B8C;
+	box-shadow: 2px 2px 10px #8B8B8C;
 }
 
 #footer a{
@@ -63,12 +71,15 @@
 	padding: 0px 10px;
 	background-color: white;
 }
-/*.news h3{
-	padding: 5px;
+.news h3{
+	font-family : URW Chancery L, cursive;
+	font-size: 30px;
+	padding: 0px 15px;
 	border-radius: 4px;
-	background-color: #5A6DE8;
-	width: 97%;
-}*/
+	background-color: #36C948;
+	width: 95%;
+	margin: 10 20px;
+}
 .case-news{
 	width: 17%;
 	float: left;
@@ -77,7 +88,9 @@
 	/*border-radius: 4px;*/
 	/*background-color: #E3D4FA;*/
 	font-size: 12px;
-	/*border-right: dashed 1px #BDBDBD;*/
+	border-right: solid 1px #BDBDBD;
+	height: 180px;
+	padding: 5px;
 }
 .case-news img{
 	height: 100px;
