@@ -9,7 +9,7 @@
 		<meta charset="UTF-8" />
 		<title>Le Bazar du Citron</title>
 		<link rel="stylesheet" type="text/css" href="/Le-Bazar-du-Citron/css/main.css" />
-		<link rel="stylesheet" type="text/css" href="/Le-Bazar-du-Citron/css/dock.css" />
+		<!-- <link rel="stylesheet" type="text/css" href="/Le-Bazar-du-Citron/css/dock.css" /> -->
 		
 	
 		<link rel="stylesheet" href="//code.jquery.com/ui/1.10.4/themes/smoothness/jquery-ui.css">
@@ -17,39 +17,6 @@
 		<!-- // <script src="//code.jquery.com/ui/1.10.4/jquery-ui.js"></script> -->
 		<!-- // <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> -->
 		<!-- // <script type="text/javascript" src="http://ajax.microsoft.com/ajax/jquery.validate/1.7/jquery.validate.min.js"></script> -->
-		<script type="text/javascript">
-			$(document).ready(
-				function() { 
-					// $("#tabs").tabs();
-					$("#onglets").tabs();
-
-					$('.form_add_game').submit(function() {
-				 		
-				        var name = $('#gameNameInput').val();
-				        var shortDesc = $('#inputShortDescName').val();
-				        var longDesc = $('#inputLongDescName').val();
-				        var minPlayers = $('#minPlayersSelect').val();
-				        var maxPlayers = $('#maxPlayersSelect').val();
-				        var minAge = $('#minAgeSelect').val();
-				        var duration = $('#durationSelect').val();
-				        var price = $('#priceSelect').val();
-
-				        var editor = $('#editorSelect').val();
-				        var author = $('#authorSelect').val();
-				        
-				        $.post(
-				        	"Games/saveGame.php", 
-				        	{name: name, shortDesc: shortDesc, longDesc: longDesc, minPlayers: minPlayers,
-				        		maxPlayers: maxPlayers, minAge: minAge, duration: duration, price: price,
-				        		editor: editor, author: author}, 
-				        	function(data){
-					        	alert(data);
-					        });
-				        return false;
-				    });
-				}
-			);
-		</script>
 	
 		<!--[if lt IE 9]>
 	      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -65,52 +32,38 @@
 
 	<body id="body">
 
-		<div>
-            <ul id="nav" class="dock">
-                <li class="menu-logo"><a href="#"><img src="/Le-Bazar-du-Citron/img/banniere.png" width="350px"></a></li>
-                <li><a href="#s1">Jeux <img src="/Le-Bazar-du-Citron/img/fleche_bas.png" width="15px"></a>
-                    <span id="s1"></span>
+        <!-- <div class="header_admin">
+            <ul>
+                <li><a href="#"><img style="float: left;" src="/Le-Bazar-du-Citron/img/lemon.png" height="30px"></a></li>
+                <li><a href="#s1">Jeux</a>
                     <ul class="subs">
                         <li><a href="#">Style de jeux</a>
                             <ul>
                                 <li><a href="#">Stratégie</a></li>
-								<li><a href="#">Ambiance</a></li>
-								<li><a href="#">Rigolade</a></li>
-								<li><a href="#">Plateaux</a></li>
-			            		<li><a href="#">Cartes</a></li>
-			            		<li><a href="#">Dés</a></li>
+                                <li><a href="#">Ambiance</a></li>
+                                <li><a href="#">Rigolade</a></li>
+                                <li><a href="#">Plateaux</a></li>
+                                <li><a href="#">Cartes</a></li>
+                                <li><a href="#">Dés</a></li>
                             </ul>
                         </li>
                         <li><a href="#">Nombre de joueurs </a>
                             <ul>
-                               	<li><a href="#">Famille</a></li>
-					            <li><a href="#">Solo</a></li>
-					            <li><a href="#">Duo</a></li>
+                                <li><a href="#">Famille</a></li>
+                                <li><a href="#">Solo</a></li>
+                                <li><a href="#">Duo</a></li>
                             </ul>
                         </li>
                     </ul>
                 </li>
-                <li><a href="#s2">Films <img src="/Le-Bazar-du-Citron/img/fleche_bas.png" width="15px"></a>
-                    <span id="s2"></span>
-                    <ul class="subs">
-                        <li><a href="#">Header c</a>
-                            <ul>
-                                <li><a href="#">Submenu x</a></li>
-                                <li><a href="#">Submenu y</a></li>
-                                <li><a href="#">Submenu z</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Header d</a>
-                            <ul>
-                                <li><a href="#">Submenu x</a></li>
-                                <li><a href="#">Submenu y</a></li>
-                                <li><a href="#">Submenu z</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </li>
-                <li><a href="#">Séries <img src="/Le-Bazar-du-Citron/img/fleche_bas.png" width="15px"></a></li>
+                <li><a href="#s2">Films </a></li>
+                <li><a href="#">Séries </a></li>
             </ul>
-        </div>
+        </div> -->
+
+        <header id="header">
+            <div style="float: left; width: 45%;"><img src="/Le-Bazar-du-Citron/img/banniere.png"></div>
+            <div style="float: right; width: 45%; padding-left: 40px"><form><label>Recherche : </label><input/></form></div>
+        </header>
 
 		<div id="wrapper">
